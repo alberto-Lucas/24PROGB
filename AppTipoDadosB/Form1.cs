@@ -19,16 +19,49 @@ namespace AppTipoDadosB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int idade, calcado;
-            string texto;
+            int idade = int.Parse(textBox1.Text);
 
-            idade = int.Parse(textBox1.Text);
+            MessageBox.Show(
+               "Vc é: " +
+                (idade >= 18 ? "maior de idade" : "menor de idade"));
+        }
 
-            texto = 
-                "Vc é: " + 
-                (idade >= 18 ? "maior de idade" : "menor de idade");
+        private void btnProcessarBebida_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vc bebe?: " + (ckbBebe.Checked ? "SIM" : "NÃO"));
+        }
 
-            MessageBox.Show(texto);
+        private void ckbMostrarSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            txtLogin.UseSystemPasswordChar =
+                !ckbMostrarSenha.Checked;
+
+            if (ckbMostrarSenha.Checked)
+                txtLogin.UseSystemPasswordChar = false;
+            else
+                txtLogin.UseSystemPasswordChar = true;
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            /*
+            if (txtUsuario.Text == "admin")
+            {
+                if (txtLogin.Text == "admin")
+                    MessageBox.Show("Bem vindo");
+                else
+                    MessageBox.Show("Senha invalida");
+            } 
+            else
+            {
+                MessageBox.Show("Usuario invalido");
+            }*/
+
+            if (txtUsuario.Text == "admin" &&
+                txtLogin.Text == "admin")
+                MessageBox.Show("Bem vindo");
+            else
+                MessageBox.Show("Usuario ou senha invalidos");
         }
     }
 }
