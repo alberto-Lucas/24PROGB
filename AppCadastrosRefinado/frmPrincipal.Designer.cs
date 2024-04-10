@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnProduto = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
             this.toolTipAtalhos = new System.Windows.Forms.ToolTip(this.components);
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
@@ -68,13 +68,6 @@
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
@@ -88,6 +81,13 @@
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -104,6 +104,18 @@
             this.panel1.Size = new System.Drawing.Size(471, 68);
             this.panel1.TabIndex = 4;
             // 
+            // btnSair
+            // 
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Image = global::AppCadastros.Properties.Resources.icons8_Exit_Sign_55px;
+            this.btnSair.Location = new System.Drawing.Point(141, 7);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(55, 55);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
@@ -111,6 +123,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 50);
             this.panel2.TabIndex = 7;
+            // 
+            // btnProduto
+            // 
+            this.btnProduto.FlatAppearance.BorderSize = 0;
+            this.btnProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduto.Image = global::AppCadastros.Properties.Resources.icons8_Product_55px;
+            this.btnProduto.Location = new System.Drawing.Point(73, 7);
+            this.btnProduto.Name = "btnProduto";
+            this.btnProduto.Size = new System.Drawing.Size(55, 55);
+            this.btnProduto.TabIndex = 6;
+            this.btnProduto.UseVisualStyleBackColor = true;
+            this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.FlatAppearance.BorderSize = 0;
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Image = global::AppCadastros.Properties.Resources.icons8_customer_55px;
+            this.btnCliente.Location = new System.Drawing.Point(12, 7);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(55, 55);
+            this.btnCliente.TabIndex = 5;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // lblHora
             // 
@@ -135,41 +171,6 @@
             this.lblData.Size = new System.Drawing.Size(122, 22);
             this.lblData.TabIndex = 4;
             this.lblData.Text = "00/00/0000";
-            // 
-            // btnSair
-            // 
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Image = global::AppCadastros.Properties.Resources.icons8_Exit_Sign_55px;
-            this.btnSair.Location = new System.Drawing.Point(141, 7);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(55, 55);
-            this.btnSair.TabIndex = 8;
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // btnProduto
-            // 
-            this.btnProduto.FlatAppearance.BorderSize = 0;
-            this.btnProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduto.Image = global::AppCadastros.Properties.Resources.icons8_Product_55px;
-            this.btnProduto.Location = new System.Drawing.Point(73, 7);
-            this.btnProduto.Name = "btnProduto";
-            this.btnProduto.Size = new System.Drawing.Size(55, 55);
-            this.btnProduto.TabIndex = 6;
-            this.btnProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.FlatAppearance.BorderSize = 0;
-            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCliente.Image = global::AppCadastros.Properties.Resources.icons8_customer_55px;
-            this.btnCliente.Location = new System.Drawing.Point(12, 7);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(55, 55);
-            this.btnCliente.TabIndex = 5;
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // timerHora
             // 

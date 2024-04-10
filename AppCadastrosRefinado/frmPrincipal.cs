@@ -112,12 +112,20 @@ namespace AppCadastros
 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmCadProdutos form 
+                = new frmCadProdutos();
+            form.ShowDialog();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             sairToolStripMenuItem.PerformClick();
+        }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            //Simuilar o click do mouse, no botão
+            produtosToolStripMenuItem.PerformClick();
         }
     }
 }
